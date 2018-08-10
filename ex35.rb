@@ -15,6 +15,7 @@ def gold_room
 
   if how_much < 50
     puts "Nice, you're not greedy, you win!"
+    # this exits the program with zero errors
     exit(0)
   else
     dead("You greedy bastard!")
