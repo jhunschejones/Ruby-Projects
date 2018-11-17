@@ -1,0 +1,7 @@
+# Ruby-Practice
+
+This repository is for the Ruby practice files created while working through Zed Shaw's coding book, ['Learn Ruby The Hard Way'](https://learnrubythehardway.org/book/). I do not own the content from this book, but the work displayed here is my own. Picking Ruby back up after spending some time working in C# and .NET was quite a challenge. Even though Ruby is an object oriented language like C#, the workflow and syntax are fairly different and I found elements of the language that I liked more and some that I liked less. 
+
+I’ve actually worked through this book once before back in 2017, culminating with the creation of my first console game, [*Rangor I*](https://github.com/jhunschejones/Rangor). Coming back to the book with a much stronger grasp of software development and computer science fundamentals, I am discovering there is so much more here that went over my head on the first pass. So far my favorite exercise was a smaller console game I built in [exercise 43](https://github.com/jhunschejones/Ruby-Practice/blob/master/ex43.rb). It plays much like *Rangor I*, but the class-based structure offers much more flexibility and extensibility. I imagine I will be able to borrow much from this architecture to build a more interactive console app than *Rangor I*.
+
+I will continue post more here about challenges and learning opportunities I experience along the way as I work through the book. Thanks for stopping by to take a look at what I've been up to!
