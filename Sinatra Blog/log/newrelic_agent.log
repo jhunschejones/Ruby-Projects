@@ -1,0 +1,29 @@
+# Logfile created on 2018-11-14 17:18:05 -0800 by logger.rb/56438
+[2018-11-14 17:18:05 -0800 C02WQ0HTHV2V (79749)] INFO : Starting the New Relic agent version 5.5.0.348 in "development" environment.
+[2018-11-14 17:18:05 -0800 C02WQ0HTHV2V (79749)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2018-11-14 17:18:05 -0800 C02WQ0HTHV2V (79749)] INFO : Reading configuration from newrelic.yml (/Users/jjones/Documents/GitHub/Ruby-Practice/Sinatra Blog)
+[2018-11-14 17:18:05 -0800 C02WQ0HTHV2V (79749)] INFO : Environment: development
+[2018-11-14 17:18:05 -0800 C02WQ0HTHV2V (79749)] INFO : No known dispatcher detected.
+[2018-11-14 17:18:05 -0800 C02WQ0HTHV2V (79749)] INFO : Application: Sinatra Blog (Development)
+[2018-11-14 17:18:06 -0800 C02WQ0HTHV2V (79749)] INFO : Installing ActiveRecord 5 instrumentation
+[2018-11-14 17:18:06 -0800 C02WQ0HTHV2V (79749)] INFO : Installing Sinatra instrumentation
+[2018-11-14 17:18:06 -0800 C02WQ0HTHV2V (79749)] INFO : Installing Net instrumentation
+[2018-11-14 17:18:06 -0800 C02WQ0HTHV2V (79749)] INFO : Installing deferred Rack::Builder instrumentation
+[2018-11-14 17:18:06 -0800 C02WQ0HTHV2V (79749)] INFO : Installing Rack::Builder middleware instrumentation
+[2018-11-14 17:18:06 -0800 C02WQ0HTHV2V (79749)] INFO : Finished instrumentation
+[2018-11-14 17:18:06 -0800 C02WQ0HTHV2V (79749)] INFO : Doing deferred dependency-detection before Rack startup
+[2018-11-14 17:18:08 -0800 C02WQ0HTHV2V (79749)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1968242/applications/232981796
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : Starting the New Relic agent version 5.5.0.348 in "development" environment.
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : Reading configuration from newrelic.yml (/Users/jjones/Documents/GitHub/Ruby-Practice/Sinatra Blog)
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : Environment: development
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : No known dispatcher detected.
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : Application: Sinatra Blog (Development)
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : Installing ActiveRecord 5 instrumentation
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : Installing Sinatra instrumentation
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : Installing Net instrumentation
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : Installing deferred Rack::Builder instrumentation
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : Installing Rack::Builder middleware instrumentation
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : Finished instrumentation
+[2018-11-14 22:14:04 -0800 C02WQ0HTHV2V (83722)] INFO : Doing deferred dependency-detection before Rack startup
+[2018-11-14 22:14:07 -0800 C02WQ0HTHV2V (83722)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1968242/applications/232981796

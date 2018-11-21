@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <br/>
+  <h3 style="display:inline;"><%= @post.title %>&nbsp;</h3>
+  <form action="/api/v1/<%= @post.id %>" method="POST" style="display:inline;">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="X" style="cursor:pointer;border:none;padding:0px;opacity:0.3;font-size:1.5em;"/>
+  </form>
+  <p class="text-secondary font-italic">Created <%= @post.created_at.month %>-<%= @post.created_at.day %>-<%= @post.created_at.year %>, by <%= @post.author %></p>
+  <p><%= @post.body %></p>
+  <br/>
+  <h4 class="text-secondary">Edit Post:</h4>
+  <form method="post" action="/api/v1/<%= @post.id %>">
+    <input type="hidden" name="_method" value="put">
+    <input type="text" name="title" class="form-control" value="<%= @post.title %>" style="max-width:400px;margin-bottom:5px;">
+    <input type="text" name="author" class="form-control" value="<%= @post.author %>" style="max-width:400px;margin-bottom:5px;"> 
+    <textarea class="form-control" name="body" style="max-width:600px;margin-bottom:5px;"><%= @post.body %></textarea>
+    <button type="submit" class="btn btn-sm btn-primary">Update Post</button>
+  </form>
+</div>

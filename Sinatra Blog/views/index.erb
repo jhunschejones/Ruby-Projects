@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <br />
+  <h2>All Posts</h2>
+  <ul style="list-style-type:none;padding:0px;">
+  <% @posts.each do |post| %>
+    <li>
+      <a href="/post/<%= post.id %>"><%= post.title %></a> | <%= post.created_at.localtime %>
+    </li>
+  <% end %>
+  </ul>
+  <h2>Add A Post</h2>
+  <form method="post" action="/api/v1">
+    <input type="text" name="title" class="form-control" placeholder="Title..." style="max-width:400px;margin-bottom:5px;">
+    <input type="text" name="author" class="form-control" placeholder="Author..." style="max-width:400px;margin-bottom:5px;"> 
+    <textarea class="form-control" name="body" placeholder="Body..." style="max-width:600px;margin-bottom:5px;"></textarea>
+    <input type="submit" value="Add Post" class="btn btn-sm btn-primary">
+  </form>
+</div>
