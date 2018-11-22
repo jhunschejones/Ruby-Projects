@@ -1,3 +1,15 @@
+get "/" do
+  @posts = Post.order("created_at DESC")
+  @title = "Welcome."
+  erb :"posts/index"
+end
+
+get "/posts/:id" do
+  @post = Post.find(params[:id])
+  @title = @post.title
+  erb :"posts/view"
+end
+
 get "/posts/create" do
   @title = "Create Post"
   @post = Post.new
