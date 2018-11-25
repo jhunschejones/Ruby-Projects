@@ -1,7 +1,7 @@
 # dependencies
 require "sinatra"
 require "sinatra/activerecord"
-require_relative "config/environments"
+require './config/environments'
 require "sinatra/flash"
 require "sinatra/redirect_with_flash"
 require_relative "models/post"
