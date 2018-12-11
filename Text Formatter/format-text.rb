@@ -1,3 +1,4 @@
+# This is the application code as it was turned in with the coding challenge
 class TextFormatter
 
   def initialize
