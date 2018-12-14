@@ -92,9 +92,9 @@ class TextFormatter
     return output.join("\n\n")
   end
 
-  # separating this method out for ease of refactoring, should output 
-  # requirements change - this also enables a fairly complete integration test
-  # test of all the other functionality of the app
+  # Separating this method out for ease of refactoring if app output 
+  # requirements change. This also enables a fairly complete integration test
+  # of the remaining functionality of the app.
   def output_formatted_text(output_string)
     puts output_string
   end
