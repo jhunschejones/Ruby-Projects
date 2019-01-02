@@ -12,3 +12,7 @@ The included tests check each method in the `TextFormatter` class. This allows u
 You will find two versions of the application in this directory. `format-text.rb` is the first version which matches my initial submission for the code challenge. *(It corresponds to the `tests.rb` test suite.)* After receiving some feedback on the code, I refactored the app and wrote new tests. You can find the refactored code in `format-text_r2.rb` with the corresponding tests in `test_r2.rb`.
 
 Overall, both versions of the application can format a text file and both meet the basic requirements for the challenge. The second version has a cleaner collection of methods whose functionality better corresponds to their names. Specifically, this version does a better job of separating out file I/O and the different types of string manipulation. This makes both the application code and the test code easier to read.
+
+---
+
+*The `interview practice` directory contains the code from a practice pair-coding session where we worked on adding functionality to capitalize the first word of each sentence. We started with the first version of my application and the experience really hi-lighted how a cleaner architecture can make future changes and additions much easier to implement. In my next re-factor of this challenge, I will also add this capitalization functionality along with more handling for cases where a period does not represent the end of a sentence or a sentence ends with a different punctuation.*  
