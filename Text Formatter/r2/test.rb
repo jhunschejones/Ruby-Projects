@@ -1,5 +1,5 @@
 require 'test/unit'
-require './format-text_r2.rb'
+require './format-text.rb'
 
 class TextFormatterTests < Test::Unit::TestCase
 
