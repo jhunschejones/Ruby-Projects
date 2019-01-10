@@ -23,26 +23,30 @@ class TextFormatter
   def paragraphs(string)
     newline_counter = 0
     output_array = []
-    t = ""
+    temp_string = ""
     p = string.split("\n")
     p.each do |line|
       if newline_counter > 1 && line != ""
-        output_array.push(t)
-        t = ""
-        t << line
+        temp_string << " " if temp_string[-1] != " "
+        output_array.push(temp_string)
+        temp_string = ""
+        temp_string << line
         newline_counter = 0
       else
         if line == ""
           newline_counter = newline_counter + 1 
         else
-          t = t.strip()
+          temp_string = temp_string.strip()
           line = line.strip()
-          t << " "
-          t << line
+          temp_string << " "
+          temp_string << line
         end
       end
 
-      output_array.push(t) if line == p[p.length-1]
+      if line == p[p.length-1]
+        temp_string << " " if temp_string[-1] != " "
+        output_array.push(temp_string) 
+      end
     end
 
     output_array
@@ -54,6 +58,27 @@ class TextFormatter
 
     output_array = split_on_punctuation(string, punctuation)
     output_array = join_exceptions(output_array, exceptions)
+
+    output_array
+  end
+
+  def split_on_punctuation(string, punctuation)
+    output_array = [string]
+
+    punctuation.each do |p|
+      output_array = output_array.map do |s|
+        s = s.split(p)
+        
+        s = s.map do |sentence|
+          if sentence[-1] != " "
+            sentence = sentence << p 
+          else
+            sentence
+          end
+        end
+      end
+      output_array = output_array.flatten()
+    end
 
     output_array
   end
@@ -85,46 +110,54 @@ class TextFormatter
     output_array
   end
 
-  def split_on_punctuation(string, punctuation)
-    output_array = [string]
+  def capitalize(string)
+    first_character = string[0]
+    string[0] = first_character.upcase
 
-    punctuation.each do |p|
-      output_array = output_array.map do |s|
-        s = s.split(p)
-        
-        s = s.map do |sentence|
-          if sentence[-1] != " "
-            sentence = sentence << p 
-          else
-            sentence
-          end
-        end
+    string
+  end
+
+  def short_lines(string)
+    words = string.split(" ")
+    output_string = ""
+    counter = 0
+
+    words.each do |word|
+      if counter + word.length < 80
+        output_string << word
+        output_string << " "
+        counter = counter + word.length + 1
+      else
+        output_string = output_string.strip()
+        output_string << "\n"
+        output_string << word
+        output_string << " "
+        counter = word.length + 1
       end
-      output_array = output_array.flatten()
     end
 
-    output_array
-  end
-
-  def capitalize 
-    # takes a string and returns the string with the first letter
-    # upcased
-  end
-
-  def short_lines
-    # takes a string and returns the string with all lines shorter
-    # than 80 characters, except for 80 character long words
-    # lines are broken before or after a word
-  end
-
-  def output
-    # takes a string, sends string to an output, currently standard out
+    output_string
   end
 
 end
 
-# prevents these methods from being called automatically when requiring in the
-# file for a test
 if __FILE__ == $0
   formatter = TextFormatter.new()
+  string = formatter.read_file(ARGV.first)
+  string = formatter.whitespace(string)
+  paragraphs = formatter.paragraphs(string)
+
+  paragraphs = paragraphs.map do |paragraph|
+    sentences = formatter.sentences(paragraph)
+
+    sentences = sentences.map do |sentence|
+      sentence = formatter.capitalize(sentence)
+    end
+
+    paragraph = sentences.join("")
+    paragraph = formatter.short_lines(paragraph)
+  end
+
+  output_string = paragraphs.join("\n\n")
+  puts output_string
 end
