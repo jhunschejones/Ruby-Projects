@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  # get 'subjects/show'
-  # get 'subjects/index'
-  # get 'subjects/new'
-  # get 'subjects/edit'
-  # get 'subjects/delete'
-  resources :subjects do
+
+  root 'subjects#index'
+
+  resources :subjects, :pages, :sections do
+    # delete page is not automatically included
     member do
       get :delete
     end
