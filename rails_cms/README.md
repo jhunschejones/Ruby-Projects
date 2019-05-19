@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+This application provides a basic UI and API for managing written content in the form of subjects, pages, and page sections. In addition, it also limits control of these pages to site admins, while providing a public portal for non-admin users to read the content.
 
-Things you may want to cover:
+## Lessons Learned
+This project was a great opportunity to practice a resource-focused approach to implementing CRUD functionality in a web application. Though I have done a few smaller Rails projects in the past, this one did present some interesting new challenges that I enjoyed working through. First, though the styling is minimal, the app uses a lot of server-side html templating to gather information together before presenting it to the user. This is something I am interested in learning more about since I am particularly passionate about providing users with fast, low-overhead web experiences and an important element in that goal is finding a balance of server and client side rendering.
 
-* Ruby version
+The use of database migration files to put together the MySQL tables for the project was great practice for an approach I want to incorporate into more of my projects in the future. Phoenix also provided an easy way to implement this functionality, and both approaches seem more resilient than the methods I have previously used in recent Express.js applications. One difference between Phoenix and Rails was that I found myself referencing the `schema.rb` file when I needed to remind myself of the data available in each table, rather than simply looking at the models for the resources in question. In the context of this project, it did not feel like these workflow tradeoffs were worth the code-savings gained by not including schemas in the model classes themselves. I will be curious to explore this more in the future, especially with a project that has more models.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Finally, this was the first I really pushed myself to better understand the Rails asset pipeline and how it can be used to simplify resource management and delivery. Many of the frameworks I worked with previously were created *after* Ruby on Rails, so I encountered interesting implementations of several familiar tools and tricks while working on this project. Seeing these common patterns also gave me a better appreciation for the ways in which Rails has shaped the greater web development world in past decade. I hope to be able to put some of these tools to use in new ways in my upcoming projects to continue to improve the efficiency and power of the web applications I can deliver to users. 

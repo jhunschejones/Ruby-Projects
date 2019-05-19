@@ -2,6 +2,7 @@ class SubjectsController < ApplicationController
   # tells controller to render templates using 'admin.html.erb' layout
   layout 'admin'
 
+  before_action :authenticate_user
   before_action :get_subject_count, only: [:new, :create, :edit, :update]
 
   def index
@@ -39,7 +40,7 @@ class SubjectsController < ApplicationController
 
     if @subject.update_attributes(subject_params)
       flash[:notice] = "Subject updated successfully."
-      redirect_to(subjects_path(subject))
+      redirect_to(subjects_path(@subject))
     else
       render('edit')
     end
