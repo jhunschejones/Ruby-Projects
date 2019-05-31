@@ -14,6 +14,7 @@ I have spent time studying several different technology stacks and software tool
 * [Generator](https://github.com/jhunschejones/Ruby-Projects/tree/master/Generator): A Ruby console application that allows users to build their own HTML web app that in turn generates funny names or phrases based on a list of words to randomize. 
 
 ### Frameworks:
+* [Sinatra Movies](https://github.com/jhunschejones/Ruby-Projects/tree/master/sinatra_movies): A web app using the Sinatra framework and Ruby's YAML module to store and retrieve custom user data.
 * [Sinatra Blog](https://github.com/jhunschejones/Ruby-Projects/tree/master/Sinatra%20Blog): A web app that uses a SQLite database and active record to implement full CRUD functionality for plain-text blog posts.
 * [Sinatra Blog 2](https://github.com/jhunschejones/Ruby-Projects/tree/master/Sinatra%20Blog%202): This is a more fully-featured blog application that uses an AWS-hosted Postgres database along with Sinatra and Active Record. Still under construction!
 * [Rails Blog](https://github.com/jhunschejones/Ruby-Projects/tree/master/Rails%20Blog): A web app that implements CRUD functionality for users and microposts, using Rails and Active Record with SQLite in dev, and Postgres in prod.
