@@ -1,0 +1,16 @@
+---
+1: !ruby/object:Movie
+  title: Finding Nemo
+  genre: Animated/Family
+  year: '2003'
+  id: 1
+2: !ruby/object:Movie
+  title: Whisper of the Heart
+  genre: Anime
+  year: '1995'
+  id: 2
+3: !ruby/object:Movie
+  title: Life Itself
+  genre: '2018'
+  year: Drama
+  id: 3
