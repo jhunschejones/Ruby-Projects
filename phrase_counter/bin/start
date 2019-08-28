@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby -w
+require_relative '../phrase_counter'
+
+PhraseCounter.run(ARGF)
