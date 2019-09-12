@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link type="text/css" rel="stylesheet" href="../css/site.css"/>
+  </head>
+
+  <body>
+    <script>
+      // Register only one service worker for the whole app
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js', {scope: '/'});
+      };
+    </script>
+  </body>
+</html>
