@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+system("ruby ./file_encryption/file_decryptor.rb")
