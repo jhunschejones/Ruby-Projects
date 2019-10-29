@@ -1,0 +1,5 @@
+Dear <%= @order.name %>
+
+Your Depot Books order has shipped. This order includes the following items:
+
+<%= render @order.line_items -%>
